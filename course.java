@@ -18,6 +18,7 @@ public class CourseManager {
         for (Course c : courses) {
             System.out.println("- " + c.title + " (" + c.credits + " crédits)");
             // System.out.println("- " + c.title + " (" + c.credits + " crédits)");
+             //System.out.println("- " + c.title + " (" + c.credits + " crédits)");
         }
     }
 }
