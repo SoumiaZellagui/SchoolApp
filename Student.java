@@ -23,7 +23,7 @@ public class Student {
         Student newStudent = new Student(name,anne_nissance);
         studentList.add(newStudent);
     }
- 
+   /// methode age 
      public static List<Student> calculateAge ()
      { if (studentList.isEmpty()) {
             System.out.println("Aucun étudiant enregistré.");
