@@ -17,9 +17,16 @@ public class CourseManager {
         System.out.println("\nListe des cours :");
         for (Course c : courses) {
             System.out.println("- " + c.title + " (" + c.credits + " crédits)");
+            // System.out.println("- " + c.title + " (" + c.credits + " crédits)");
+             //System.out.println("- " + c.title + " (" + c.credits + " crédits)");
+             //System.out.println("- " + c.title + " (" + c.credits + " crédits)");
+             //System.out.println("- " + c.title + " (" + c.credits + " crédits)");
+             //System.out.println("- " + c.title + " (" + c.credits + " crédits)");
+             //System.out.println("- " + c.title + " (" + c.credits + " crédits)");
         }
     }
-
-    // ✅ Méthode display() pour afficher tous les cours
-    // ✅ Méthode display() pour afficher tous les cours
 }
+
+// Méthode addCourse()
+    public static void addtp(String title, int credits) {
+        System.out.println("tp ajouté : " + title + " (" + credits + " crédits)");
