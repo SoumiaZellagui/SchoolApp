@@ -23,7 +23,7 @@ public class Student {
         Student newStudent = new Student(name,anne_nissance);
         studentList.add(newStudent);
     }
-   /// methode age 
+     // Méthode pour calculer l'âge à partir de l'année de naissance 
      public static List<Student> calculateAge ()
      { if (studentList.isEmpty()) {
             System.out.println("Aucun étudiant enregistré.");
