@@ -45,16 +45,7 @@ public class Student {
             }
         }
      }
-     public static void displayStudent() {
-        if (studentList.isEmpty()) {
-            System.out.println("Aucun étudiant enregistré.");
-        } else {
-            System.out.println("Liste des étudiants :");
-            for (Student s : studentList) {
-                System.out.println("Nom : " + s.name + ", Âge : " + s.age);
-            }
-        }
-    }
+    
    
     // Méthode main pour tester
     public static void main(String[] args) {
