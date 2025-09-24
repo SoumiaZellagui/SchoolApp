@@ -6,7 +6,7 @@ public class Student {
     // Attributs d'un étudiant
     private String name;
     private int age;
-    private int anneeNaissance;
+    private int  anne_nissance ;
 
     // Liste statique partagée entre tous les objets Student
     private static List<Student> studentList = new ArrayList<>();
@@ -24,7 +24,7 @@ public class Student {
     }
 
     // Méthode pour remplir l'année de naissance d'un étudiant
-    public static void rempliNaissance(String name, int anneeNaissance) {
+    public static void rempliNaissance(String name, int  anne_nissance ) {
         if (studentList.isEmpty()) {
             System.out.println("Aucun étudiant enregistré.");
             return;
@@ -32,7 +32,7 @@ public class Student {
 
         for (Student s : studentList) {
             if (s.name.equals(name)) {
-                s.anneeNaissance = anneeNaissance;
+                s. anne_nissance  = anne_nissance ;
                 return;
             }
         }
