@@ -75,7 +75,7 @@ public class Student {
             }
         }
     }
-
+    // test
     // Méthode main pour tester
     public static void main(String[] args) {
         addStudent("Alice", 21);
