@@ -11,4 +11,12 @@ public class CourseManager {
         addCourse("Programmation Java", 5);
         addCourse("Structures de données", 4);
     }
+
+     // ✅ Méthode display() pour afficher tous les cours
+    public static void display() {
+        System.out.println("\nListe des cours :");
+        for (Course c : courses) {
+            System.out.println("- " + c.title + " (" + c.credits + " crédits)");
+        }
+    }
 }
