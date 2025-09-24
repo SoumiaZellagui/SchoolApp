@@ -17,6 +17,12 @@ public class CourseManager {
         System.out.println("\nListe des cours :");
         for (Course c : courses) {
             System.out.println("- " + c.title + " (" + c.credits + " crédits)");
+            // System.out.println("- " + c.title + " (" + c.credits + " crédits)");
+             //System.out.println("- " + c.title + " (" + c.credits + " crédits)");
+             //System.out.println("- " + c.title + " (" + c.credits + " crédits)");
+             //System.out.println("- " + c.title + " (" + c.credits + " crédits)");
+             //System.out.println("- " + c.title + " (" + c.credits + " crédits)");
+             //System.out.println("- " + c.title + " (" + c.credits + " crédits)");
         }
     }
 
