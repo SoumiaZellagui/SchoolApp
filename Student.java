@@ -2,58 +2,83 @@ import java.util.ArrayList;
 import java.util.List;
 import java.time.LocalDate;
 
-
 public class Student {
     // Attributs d'un étudiant
     private String name;
     private int age;
-    private int anne_nissance ;
+    private int anneeNaissance;
 
     // Liste statique partagée entre tous les objets Student
     private static List<Student> studentList = new ArrayList<>();
 
     // Constructeur
-    public Student(String name, int anne_nissance ) {
+    public Student(String name, int age) {
         this.name = name;
-        this.anne_nissance = anne_nissance;
+        this.age = age;
     }
 
-    // Méthode statique pour ajouter un étudiant à la liste
-    public static void addStudent(String name, int anne_nissance) {
-        Student newStudent = new Student(name,anne_nissance);
+    // Méthode pour ajouter un étudiant
+    public static void addStudent(String name, int age) {
+        Student newStudent = new Student(name, age);
         studentList.add(newStudent);
     }
-     // Méthode pour calculer l'âge à partir de l'année de naissance 
-     public static List<Student> calculateAge ()
-     { if (studentList.isEmpty()) {
+
+    // Méthode pour remplir l'année de naissance d'un étudiant
+    public static void rempliNaissance(String name, int anneeNaissance) {
+        if (studentList.isEmpty()) {
             System.out.println("Aucun étudiant enregistré.");
-            else{
-                int currentYear = LocalDate.now().getYear();
-                for (Student s : studentList) {
-                s.age = currentYear - s.anne_nissance;
-            }
+            return;
+        }
+
+        for (Student s : studentList) {
+            if (s.name.equals(name)) {
+                s.anneeNaissance = anneeNaissance;
+                return;
             }
         }
-     }
-     // Méthode statique pour afficher tous les étudiants
+
+        System.out.println("Étudiant non trouvé : " + name);
+    }
+
+    // Méthode pour calculer l'âge à partir de l'année de naissance
+    public static void calculateAge() {
+        if (studentList.isEmpty()) {
+            System.out.println("Aucun étudiant enregistré.");
+            return;
+        }
+
+        int currentYear = LocalDate.now().getYear();
+
+        for (Student s : studentList) {
+            if (s.anneeNaissance > 0) {
+                s.age = currentYear - s.anneeNaissance;
+            }
+        }
+    }
+
+    // Méthode pour afficher tous les étudiants
     public static void displayStudent() {
         if (studentList.isEmpty()) {
             System.out.println("Aucun étudiant enregistré.");
         } else {
             System.out.println("Liste des étudiants :");
             for (Student s : studentList) {
-                System.out.println("Nom : " + s.name + ", Âge : " + s.age);
+                System.out.println("Nom : " + s.name + ", Âge : " + s.age + ", Année de naissance : " + s.anneeNaissance);
             }
         }
     }
-    
-   
+
     // Méthode main pour tester
     public static void main(String[] args) {
-        Student.addStudent("Alice", 2000);
-        Student.addStudent("Bob", 1999);
-        Student.addStudent("Claire",1998);
-        Student.calculateAge();
-        Student.displayStudent();
+        addStudent("Alice", 21);
+        addStudent("Bob", 22);
+        addStudent("Claire", 20);
+
+        rempliNaissance("Alice", 1999);
+        rempliNaissance("Bob", 1998);
+        rempliNaissance("Claire", 2000);
+
+        calculateAge();
+        displayStudent();
     }
 }
