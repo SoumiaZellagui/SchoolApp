@@ -50,9 +50,9 @@ public class Student {
         int currentYear = LocalDate.now().getYear();
 
         for (Student s : studentList) {
-            if (s. anne_nissance  > 0) {
+            
                 s.age = currentYear - s. anne_nissance ;
-            }
+            
         }
     }
 
