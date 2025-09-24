@@ -32,7 +32,7 @@ public class Student {
 
         for (Student s : studentList) {
             if (s.name.equals(name)) {
-                s. anne_nissance  = anne_nissance ;
+                s.anne_nissance  = anne_nissance ;
                 return;
             }
         }
@@ -51,7 +51,11 @@ public class Student {
 
         for (Student s : studentList) {
             
-                s.age = currentYear - s. anne_nissance ;
+               if (s.anne_nissance  > 0) {
+
+                s.age = currentYear - s.anne_nissance ;
+            }
+
             
         }
     }
@@ -63,7 +67,11 @@ public class Student {
         } else {
             System.out.println("Liste des étudiants :");
             for (Student s : studentList) {
-                System.out.println("Nom : " + s.name + ", Âge : " + s.age + ", Année de naissance : " + s.anneeNaissance);
+                System.out.println("Nom : " + s.name + ", Âge : " + s.age + ", Année de naissance : " + s.anne_nissance ) {
+
+                s.age = currentYear - s. anne_nissance ;
+            }
+;
             }
         }
     }
