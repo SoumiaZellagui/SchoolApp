@@ -25,4 +25,7 @@ public class CourseManager {
              //System.out.println("- " + c.title + " (" + c.credits + " crédits)");
         }
     }
+
+    // ✅ Méthode display() pour afficher tous les cours
+    // ✅ Méthode display() pour afficher tous les cours
 }
